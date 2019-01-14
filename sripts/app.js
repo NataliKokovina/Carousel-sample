@@ -55,13 +55,13 @@ class Carousel {
     }
 
     createImg() {
-        const first = this.slides[0].cloneNode(true);
-        const second = this.slides[1].cloneNode(true);
-        const three= this.slides[2].cloneNode(true);
-        if(this.slides[this.slides.length-1].id === "last"){
+        if(this.el.querySelectorAll('.slide').length == 7 ) {
+            const first = this.slides[0].cloneNode(true);
+            const second = this.slides[1].cloneNode(true);
+            const third= this.slides[2].cloneNode(true);
             this.elements.slides.appendChild(first);
             this.elements.slides.appendChild(second);
-            this.elements.slides.appendChild(three);
+            this.elements.slides.appendChild(third);
         }
     }
     getJumpNext() {
